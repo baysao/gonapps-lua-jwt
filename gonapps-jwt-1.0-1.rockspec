@@ -18,7 +18,7 @@ description = {
 
 dependencies = {
     "lua >= 5.1",
-    "lua-cjson >= 2.1.0-1",
+    "rapidjson >= 0.4.5-1",
 	"lbase64 >= 20120807-3",
     "luaossl >= 20151221-1"
 }

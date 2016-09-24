@@ -1,4 +1,4 @@
-local cjson  = require "cjson"
+local json  = require "rapidjson"
 local base64 = require "base64"
 local hmac = require "openssl.hmac"
 
@@ -28,7 +28,7 @@ function _M.encode(payload, key, algorithm)
 	algorithm = algorithm or "HS256" 
 	assert(sign[algorithm] ~= nil, "Algorithm not supported")
 	local header = {["typ"] = "JWT", ["alg"] = algorithm }
-	local tokenParts = {base64.encode(cjson.encode(header)), base64.encode(cjson.encode(payload))}
+	local tokenParts = {base64.encode(json.encode(header)), base64.encode(json.encode(payload))}
 	local signature = sign[algorithm](table.concat(tokenParts, "."), key)
 	table.insert(tokenParts, base64.encode(signature))
 	return table.concat(tokenParts, ".")
@@ -36,7 +36,7 @@ end
 
 function _M.decode(encodedToken, key)
 	local encodedHeader, encodedPayload, encodedSignature = decodeToken(encodedToken) 
-	local header, payload, signature = cjson.decode(base64.decode(encodedHeader)), cjson.decode(base64.decode(encodedPayload)), base64.decode(encodedSignature)
+	local header, payload, signature = json.decode(base64.decode(encodedHeader)), json.decode(base64.decode(encodedPayload)), base64.decode(encodedSignature)
    	assert(header.typ == "JWT", "Invalid typ")
    	assert(type(header.alg) == "string", "Invalid alg")
    	assert(type(payload.exp) == "number", "Invalid exp")
