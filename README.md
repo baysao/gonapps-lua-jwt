@@ -1,8 +1,8 @@
-gonapps-lua-jwt
+gonapps-jwt
 =
 
 ## About
-JSON Web Tokens for Lua<br/>
+A thread-safe luaossl based JWT encoding/decoding module.<br/>
 This module is a fork from x25/luajwt.<br/>
 It is using luaossl instead of LuaCrypto because LuaCrypto is deprecated, not maintained, not thread-safe.<br/>
 Functions have been slightly changed.<br/>
@@ -10,7 +10,7 @@ Functions have been slightly changed.<br/>
 ## Usage
 **installation**
 ```bash
-$ sudo luarocks install gonapps-lua-jwt
+$ sudo luarocks install gonapps-jwt
 ```
 **example code**
 ```lua
