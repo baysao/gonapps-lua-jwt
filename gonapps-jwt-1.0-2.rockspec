@@ -3,6 +3,7 @@ version = "1.0-2"
 
 source = {
     url = "https://github.com/gonapps/gonapps-lua-jwt/archive/v1.0-2.tar.gz",
+    dir = "gonapps-lua-jwt-1.0-2"
 }
 
 description = {
