@@ -2,8 +2,7 @@ package = "gonapps-jwt"
 version = "1.0-2"
 
 source = {
-    url = "https://github.com/gonapps/gonapps-lua-jwt",
-    tag = "v1.0-2"
+    url = "https://github.com/gonapps/gonapps-lua-jwt/archive/v1.0-2.tar.gz",
 }
 
 description = {
