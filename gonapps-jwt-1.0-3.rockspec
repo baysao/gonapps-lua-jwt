@@ -1,9 +1,9 @@
 package = "gonapps-jwt"
-version = "1.0-2"
+version = "1.0-3"
 
 source = {
-    url = "https://github.com/gonapps/gonapps-lua-jwt/archive/v1.0-2.tar.gz",
-    dir = "gonapps-lua-jwt-1.0-2"
+    url = "https://github.com/gonapps-org/gonapps-lua-jwt/archive/v1.0-2.tar.gz",
+    dir = "gonapps-lua-jwt-1.0-3"
 }
 
 description = {
@@ -12,7 +12,7 @@ description = {
         This module is a fork from x25/luajwt.
         It is using luaossl instead of LuaCrypto because LuaCrypto is deprecated, not maintained and not thread-safe.
         Please refer homepage to see the usage.]],
-    homepage = "http://github.com/gonapps/gonapps-lua-jwt",
+    homepage = "http://github.com/gonapps-org/gonapps-lua-jwt",
     license = "MIT"
 }
 
